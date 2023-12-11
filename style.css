@@ -1,0 +1,438 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #F8F8F8;
+  }
+
+
+  /* NAVBAR START */
+ .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgba(255, 255, 255, 1);
+    border-bottom: 2px solid #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+ }
+
+ .navbar .navbar-logo {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #3A4750;
+    font-family: Tangerine;
+    margin: 0 1rem;
+  }
+
+ .navbar .navbar-nav a{
+    color: #3A4750;
+    display: inline-block;
+    font-size: 1.3rem;
+    margin: 0 1rem;
+    font-family: spectral;
+ }
+
+ .navbar .navbar-nav a:hover {
+    color: #222831;
+  }
+
+  .navbar .navbar-nav a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid #222831;
+    transform: scaleX(0);
+    transition: 0.2s linear;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+  }
+
+  .navbar .navbar-extra a {
+    color: #3A4750;
+    margin: 0 0.5rem;
+  }
+
+  .navbar .navbar-extra a:hover {
+    color: #222831;
+  }
+
+  #hamburger-menu {
+    display: none;
+  }
+  /* Navbar End */
+
+/* Hero section Start*/
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  position: relative;
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+  display: flex;
+  align-items: center;
+}
+
+.hero .content img {
+  width: 75%;
+  height: auto;
+  object-fit: cover;
+  margin-right: 2rem;
+}
+
+.hero .content .text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: slideInLeft 1s;
+}
+
+.hero .content h1 {
+  font-size: 3em;
+  color: #3A4750;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: 'Spectral';
+  font-style: italic;
+}
+
+.hero .content p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  line-height: 1.4;
+  font-weight: 100;
+  color: #3A4750;
+  text-align: justify;
+  font-family: Spectral;
+}
+
+.hero .content audio {
+  width: 70%;
+  margin-top: 20px;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/* Hero section End */
+
+/* About section Start*/
+.about { 
+  padding: 7rem 7% 1.4rem;
+  background-color: white;
+}
+
+.about h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+  color: #3A4750;
+  font-family: 'Spectral';
+  font-style: italic;
+}
+
+.about .row {
+  display: flex;
+}
+
+.about .row .about-img {
+  flex: 1 1 45rem;
+}
+
+.about .row .about-img img {
+  width: 60%;
+}
+
+.about .row .content {
+  flex:  1 1 35rem;
+  padding: 0 1rem;
+}
+
+.about .row .content h3 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  font-family: Tangerine;
+}
+
+.about .row .content p {
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 100;
+  line-height: 1.3;
+  font-family: Spectral;
+  font-style: italic;
+  color: #3A4750;
+}
+/* About section End*/
+
+/* Mini Galeery start */
+.MiniGallery {
+  background-color: white;
+  padding: 7rem 7% 1.4rem;
+}
+
+.MiniGallery h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+  color: #3A4750;
+  font-family: Spectral;
+  font-style: italic;
+}
+
+.MiniGallery .row {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-around; 
+}
+
+.MiniGallery .row .about-img {
+  flex: 1 1 calc(25% - 2rem); 
+  margin: 1rem; 
+  display: flex;
+  justify-content: center;
+}
+
+.MiniGallery .row .about-img img {
+  width: 70%; 
+  object-fit: cover; 
+}
+
+/* Mini Galeery end */
+
+/* Wish Start */
+.Wish { 
+  padding: 7rem 7% 1.4rem;
+  background-color: white;
+}
+
+.Wish h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 0.5rem;
+  color: #3A4750;
+  font-family: 'Spectral';
+  font-style: italic;
+}
+
+.Wish .row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Wish .row .content {
+  flex:  1 1 35rem;
+  padding: 0 1rem;
+}
+
+.Wish .row .content h3 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  font-family: Tangerine;
+}
+
+.Wish .row .content p {
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 100;
+  line-height: 1.3;
+  font-family: Spectral;
+  font-style: italic;
+  color: #3A4750;
+}
+
+.Wish .row .content p.ucapan {
+  font-weight: bold;
+}
+
+/* Wish End */
+
+/* Poetry Start */
+.poetry { 
+  padding: 7rem 7% 1.4rem;
+  background-color: white;
+}
+
+.poetry h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+  color: #3A4750;
+  font-family: 'Spectral';
+  font-style: italic;
+}
+
+.poetry .row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.poetry .row .content {
+  flex:  1 1 35rem;
+  padding: 0 1rem;
+}
+
+.poetry .row .content h3 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  font-family: Tangerine;
+}
+
+.poetry .row .content p {
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 100;
+  line-height: 1.3;
+  font-family: Spectral;
+  font-style: italic;
+  color: #3A4750;
+}
+
+/* Poetry End */
+
+
+
+
+
+  /* Media Queries */
+
+  /* Laptop */
+  @media (max-width: 1366px) {
+    html {
+      font-size: 75%;
+    }
+  }
+
+  /* Tablet */
+  @media (max-width: 758px) {
+    html {
+      font-size: 62.5%;
+    }
+
+    #hamburger-menu {
+      display: inline-block;
+    }
+
+    .navbar .navbar-nav {
+      position: absolute;
+      top: 100%;
+      right: -100%;
+      background-color: #F5F5F5;
+      width: 30rem;
+      height: 100vh;
+      transition: 0.3s;
+    }
+
+    .navbar .navbar-nav.active {
+      right: 0;
+    }
+
+    .navbar .navbar-nav a {
+      color: #222831;
+      display: block;
+      margin: 1.5rem;
+      padding: 0.5rem;
+      font-size: 2rem;
+    }
+
+    .navbar .navbar-nav a::after {
+      transform-origin: 0 0;
+    }
+
+    .navbar .navbar-nav a:hover::after {
+      transform: scaleX(0.2);
+    }
+
+    .about .row {
+      flex-wrap: wrap;
+    }
+  
+    .about .row .about-img img {
+      height: 24rem;
+      object-fit: cover;
+      object-position: center;
+    }
+  
+    .about .row .content {
+      padding: 0;
+    }
+  
+    .about .row .content h3 {
+      margin-top: 1rem;
+      font-size: 2rem;
+    }
+  
+    .about .row .content p {
+      font-size: 1.6rem;
+    }
+
+    .hero .content img {
+      width: 100%;
+    }
+
+    .hero .content {
+      flex-direction: column; 
+    }
+
+    .hero .content .text-content {
+      align-items: center; 
+      margin-top: 20px;
+    }
+  }
+
+
+  /* Handphone */
+  @media (max-width: 450px) {
+    html {
+      font-size: 55%;
+    }
+
+    .hero .content img {
+      width: 100%;
+    }
+
+    .hero .content {
+      flex-direction: column; 
+    }
+
+    .hero .content .text-content {
+      align-items: center; 
+    }
+  }
+
+  
+
